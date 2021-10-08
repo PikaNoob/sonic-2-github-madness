@@ -218,8 +218,8 @@ comp_z80_size 0x155A  fÅr C-Programm */
 #define Sound_D9 0x13FFB3
 #define Sound_DA 0x13FFB3
 #define Sound_DB 0x13FFB3
-#define word_728C_user 0x7262
-#define Obj5F_MapUnc_7240 0x72E2
-#define off_3A294 0x5EC1C
-#define MapRUnc_Sonic 0x95E80
+#define word_728C_user 0x720A
+#define Obj5F_MapUnc_7240 0x728A
+#define off_3A294 0x5EA72
+#define MapRUnc_Sonic 0x95CA0
 /* Ende Includefile fÅr C-Programm */
