@@ -12071,7 +12071,7 @@ CheckCheats:	; This is called from 2 places: the options screen and the level se
 +
 	rts
 ; ===========================================================================
-level_select_cheat:	dc.b $19, $65,   9, $17,   0
+level_select_cheat:	dc.b   1,   2,   3,   4,   0
 continues_cheat:	dc.b   1,   1,   2,   4,   0	; byte_97B7
 debug_cheat:		dc.b   1,   9,   9,   2,   1,   1,   2,   4,   0
 super_sonic_cheat:	dc.b   4,   1,   2,   6,   0	; byte_97C5
