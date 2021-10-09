@@ -15,11 +15,11 @@ comp_z80_size 0x155A  fÅr C-Programm */
 #define Snd_DDZ 0x143C6E
 #define Snd_PachBonus 0x143F61
 #define Snd_SpecialS 0x14412B
-#define Snd_SlotBonus 0x144321
-#define Snd_Knux 0x14445F
-#define Snd_Title 0x1445AA
-#define Snd_1UP 0x144703
-#define Snd_Emerald 0x1447F4
+#define Snd_SlotBonus 0x144766
+#define Snd_Knux 0x1448A4
+#define Snd_Title 0x1449EF
+#define Snd_1UP 0x144B48
+#define Snd_Emerald 0x144C39
 #define Snd_AIZ1 0x148000
 #define Snd_AIZ2 0x148466
 #define Snd_HCZ1 0x148BD8
@@ -218,8 +218,8 @@ comp_z80_size 0x155A  fÅr C-Programm */
 #define Sound_D9 0x13FFB3
 #define Sound_DA 0x13FFB3
 #define Sound_DB 0x13FFB3
-#define word_728C_user 0x720A
-#define Obj5F_MapUnc_7240 0x728A
-#define off_3A294 0x5EA72
-#define MapRUnc_Sonic 0x95CA0
+#define word_728C_user 0x717C
+#define Obj5F_MapUnc_7240 0x71FC
+#define off_3A294 0x5E9E6
+#define MapRUnc_Sonic 0x95C20
 /* Ende Includefile fÅr C-Programm */

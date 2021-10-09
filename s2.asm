@@ -3901,8 +3901,6 @@ TitleScreen_Loop:
 
 	bsr.w	RunPLC_RAM
 	bsr.w	TailsNameCheat
-	tst.w	(Demo_Time_left).w
-	beq.w	TitleScreen_Demo
 	tst.b	(IntroSonic+objoff_2F).w
 	beq.w	TitleScreen_Loop
 	move.b	(Ctrl_1_Press).w,d0
@@ -3971,47 +3969,6 @@ TitleScreen_ChoseOptions:
 	move.b	#GameModeID_OptionsMenu,(Game_Mode).w ; => OptionsMenu
 	move.b	#0,(Options_menu_box).w
 	rts
-; ===========================================================================
-; loc_3D2E:
-TitleScreen_Demo:
-	move.b	#MusID_FadeOut,d0
-	bsr.w	PlaySound
-	move.w	(Demo_number).w,d0
-	andi.w	#7,d0
-	add.w	d0,d0
-	move.w	DemoLevels(pc,d0.w),d0
-	move.w	d0,(Current_ZoneAndAct).w
-	addq.w	#1,(Demo_number).w
-	cmpi.w	#(DemoLevels_End-DemoLevels)/2,(Demo_number).w
-	blo.s	+
-	move.w	#0,(Demo_number).w
-+
-	move.w	#1,(Demo_mode_flag).w
-	move.b	#GameModeID_Demo,(Game_Mode).w ; => Level (Demo mode)
-	cmpi.w	#emerald_hill_zone_act_1,(Current_ZoneAndAct).w
-	bne.s	+
-	move.w	#1,(Two_player_mode).w
-+
-	move.b	#3,(Life_count).w
-	move.b	#3,(Life_count_2P).w
-	moveq	#0,d0
-	move.w	d0,(Ring_count).w
-	move.l	d0,(Timer).w
-	move.l	d0,(Score).w
-	move.w	d0,(Ring_count_2P).w
-	move.l	d0,(Timer_2P).w
-	move.l	d0,(Score_2P).w
-	move.l	#5000,(Next_Extra_life_score).w
-	move.l	#5000,(Next_Extra_life_score_2P).w
-	rts
-; ===========================================================================
-; word_3DAC:
-DemoLevels:
-	dc.w	emerald_hill_zone_act_1		; EHZ (2P)
-	dc.w	chemical_plant_zone_act_1	; CPZ
-	dc.w	aquatic_ruin_zone_act_1		; ARZ
-	dc.w	casino_night_zone_act_1		; CNZ
-DemoLevels_End:
 
 ; ||||||||||||||| S U B R O U T I N E |||||||||||||||||||||||||||||||||||||||
 
