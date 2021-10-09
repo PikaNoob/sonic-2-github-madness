@@ -359,30 +359,30 @@ EHZ_Loop09:
 
 ; DAC Data
 EHZ_DAC:
-	dc.b	dKick, $0C, $20, smpsNoAttack, $14, $04, dMidTom, $08, dFloorTom, $04, dMidTom, $08
+	dc.b	dCrashCymbal, $0C, $20, smpsNoAttack, $14, $04, dMidTom, $08, dFloorTom, $04, dMidTom, $08
 	dc.b	dMidTom, dMidTom, dKick, dFloorTom, $04, dMidTom, dFloorTom, $08
 
 EHZ_Loop00:
-	dc.b	dKick, $10, dSnare, dKick, dSnare
+	dc.b	dKick, $10, dDanceSnare, dKick, dDanceSnare
 	smpsLoop            $00, $07, EHZ_Loop00
-	dc.b	dKick, $10, dSnare, dKick, $08, dSnare, $10, $04, dSnare
+	dc.b	dKick, $10, dDanceSnare, dKick, $08, dDanceSnare, $10, $04, dDanceSnare
 
 EHZ_Loop01:
-	dc.b	dKick, $10, dSnare, dKick, dSnare
+	dc.b	dKick, $10, dDanceSnare, dKick, dDanceSnare
 	smpsLoop            $00, $03, EHZ_Loop01
-	dc.b	dKick, $10, dSnare, dKick, $08, dSnare, $10, $08
+	dc.b	dKick, $10, dDanceSnare, dKick, $08, dDanceSnare, $10, $08
 
 EHZ_Loop02:
-	dc.b	dKick, $10, dSnare, dKick, dSnare
+	dc.b	dKick, $10, dDanceSnare, dKick, dDanceSnare
 	smpsLoop            $00, $03, EHZ_Loop02
-	dc.b	dKick, $10, dSnare, dKick, dSnare, $08, $04, dSnare, dKick, $10, dSnare, dKick
-	dc.b	dSnare, dKick, dSnare, dKick, $08, dSnare, dSnare, $10
+	dc.b	dKick, $10, dDanceSnare, dKick, dDanceSnare, $08, $04, dDanceSnare, dKick, $10, dDanceSnare, dKick
+	dc.b	dDanceSnare, dKick, dDanceSnare, dKick, $08, dDanceSnare, dDanceSnare, $10
 
 EHZ_Loop03:
-	dc.b	dKick, $10, dSnare, dKick, dSnare
+	dc.b	dKick, $10, dDanceSnare, dKick, dDanceSnare
 	smpsLoop            $00, $03, EHZ_Loop03
-	dc.b	dKick, $10, dSnare, dKick, $08, dSnare, dSnare, $10, dKick, $0C, dSnare, $20
-	dc.b	nRst, $04, dSnare, $10, dKick, $04, dMidTom, $08, $04, dSnare, $08, dMidTom
+	dc.b	dKick, $10, dDanceSnare, dKick, $08, dDanceSnare, dDanceSnare, $10, dKick, $0C, dDanceSnare, $20
+	dc.b	nRst, $04, dDanceSnare, $10, dKick, $04, dMidTom, $08, $04, dDanceSnare, $08, dMidTom
 	dc.b	dKick, dFloorTom, dFloorTom, dFloorTom, $04, dFloorTom
 	smpsJump            EHZ_Loop00
 
@@ -459,23 +459,24 @@ EHZ_Voices:
 	smpsVcReleaseRate   $0B, $0B, $0B, $0B
 	smpsVcTotalLevel    $00, $00, $00, $19
 
+
 ;	Voice $04
-;	$3B
-;	$07, $34, $32, $01, 	$1F, $14, $5F, $5F, 	$02, $02, $03, $04
-;	$01, $01, $02, $03, 	$13, $13, $13, $17, 	$1E, $28, $28, $80
-	smpsVcAlgorithm     $03
-	smpsVcFeedback      $07
+;	$04
+;	$37, $72, $77, $49, 	$1F, $1F, $1F, $1F, 	$07, $0A, $07, $0D
+;	$00, $00, $00, $00, 	$10, $07, $10, $07, 	$23, $80, $23, $80
+	smpsVcAlgorithm     $04
+	smpsVcFeedback      $00
 	smpsVcUnusedBits    $00
-	smpsVcDetune        $00, $03, $03, $00
-	smpsVcCoarseFreq    $01, $02, $04, $07
-	smpsVcRateScale     $01, $01, $00, $00
-	smpsVcAttackRate    $1F, $1F, $14, $1F
+	smpsVcDetune        $04, $07, $07, $03
+	smpsVcCoarseFreq    $09, $07, $02, $07
+	smpsVcRateScale     $00, $00, $00, $00
+	smpsVcAttackRate    $1F, $1F, $1F, $1F
 	smpsVcAmpMod        $00, $00, $00, $00
-	smpsVcDecayRate1    $04, $03, $02, $02
-	smpsVcDecayRate2    $03, $02, $01, $01
-	smpsVcDecayLevel    $01, $01, $01, $01
-	smpsVcReleaseRate   $07, $03, $03, $03
-	smpsVcTotalLevel    $00, $28, $28, $1E
+	smpsVcDecayRate1    $0D, $07, $0A, $07
+	smpsVcDecayRate2    $00, $00, $00, $00
+	smpsVcDecayLevel    $00, $01, $00, $01
+	smpsVcReleaseRate   $07, $00, $07, $00
+	smpsVcTotalLevel    $00, $23, $00, $23
 
 ;	Voice $05
 ;	$3B
