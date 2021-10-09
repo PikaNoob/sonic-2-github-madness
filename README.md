@@ -5,3 +5,5 @@ rules:
 3. No stolen code
 4. no other stolen assets
 5. dont add annoying stuff like the spike bug or something
+
+Discord: https://discord.gg/8AN7m9vgt5
