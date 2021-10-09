@@ -363,26 +363,26 @@ EHZ_DAC:
 	dc.b	dMidTom, dMidTom, dKick, dFloorTom, $04, dMidTom, dFloorTom, $08
 
 EHZ_Loop00:
-	dc.b	dKick, $10, dDanceSnare, dKick, dDanceSnare
+	dc.b	dKick, $10, dClap, dKick, dClap
 	smpsLoop            $00, $07, EHZ_Loop00
-	dc.b	dKick, $10, dDanceSnare, dKick, $08, dDanceSnare, $10, $04, dDanceSnare
+	dc.b	dKick, $10, dClap, dKick, $08, dClap, $10, $04, dClap
 
 EHZ_Loop01:
-	dc.b	dKick, $10, dDanceSnare, dKick, dDanceSnare
+	dc.b	dKick, $10, dClap, dKick, dClap
 	smpsLoop            $00, $03, EHZ_Loop01
-	dc.b	dKick, $10, dDanceSnare, dKick, $08, dDanceSnare, $10, $08
+	dc.b	dKick, $10, dClap, dKick, $08, dClap, $10, $08
 
 EHZ_Loop02:
-	dc.b	dKick, $10, dDanceSnare, dKick, dDanceSnare
+	dc.b	dKick, $10, dClap, dKick, dClap
 	smpsLoop            $00, $03, EHZ_Loop02
-	dc.b	dKick, $10, dDanceSnare, dKick, dDanceSnare, $08, $04, dDanceSnare, dKick, $10, dDanceSnare, dKick
-	dc.b	dDanceSnare, dKick, dDanceSnare, dKick, $08, dDanceSnare, dDanceSnare, $10
+	dc.b	dKick, $10, dClap, dKick, dClap, $08, $04, dClap, dKick, $10, dClap, dKick
+	dc.b	dClap, dKick, dClap, dKick, $08, dClap, dClap, $10
 
 EHZ_Loop03:
-	dc.b	dKick, $10, dDanceSnare, dKick, dDanceSnare
+	dc.b	dKick, $10, dClap, dKick, dClap
 	smpsLoop            $00, $03, EHZ_Loop03
-	dc.b	dKick, $10, dDanceSnare, dKick, $08, dDanceSnare, dDanceSnare, $10, dKick, $0C, dDanceSnare, $20
-	dc.b	nRst, $04, dDanceSnare, $10, dKick, $04, dMidTom, $08, $04, dDanceSnare, $08, dMidTom
+	dc.b	dKick, $10, dClap, dKick, $08, dClap, dClap, $10, dKick, $0C, dClap, $20
+	dc.b	nRst, $04, dClap, $10, dKick, $04, dMidTom, $08, $04, dClap, $08, dMidTom
 	dc.b	dKick, dFloorTom, dFloorTom, dFloorTom, $04, dFloorTom
 	smpsJump            EHZ_Loop00
 
